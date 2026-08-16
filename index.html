@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ادمین رنجر</title>
+    <link rel="stylesheet" href="css/tani.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center mt-3">
+                <figure class="imgLogo">
+                    <img src="img/Rayium_light.png" style="width: 200px; height: auto;" alt="" srcset="">
+                </figure>
+            </div>
+            <div class="mt-3 p-3">
+                <div class="menu-container">
+
+                    <!-- آیتم ۱ -->
+                    <div class="menu-item">
+                        <div class="menu-header" onclick="toggleMenu(this)">
+                            <span class="title">محصولات</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="sub-menu">
+                            <a href="#">🔹 گوشی موبایل</a>
+                            <a href="#">🔹 لپ‌تاپ</a>
+                            <a href="#">🔹 تبلت</a>
+                            <a href="#">🔹 هدفون</a>
+                        </div>
+                    </div>
+
+                    <!-- آیتم ۲ -->
+                    <div class="menu-item">
+                        <div class="menu-header" onclick="toggleMenu(this)">
+                            <span class="title">خدمات</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="sub-menu">
+                            <a href="#">🔸 طراحی وب</a>
+                            <a href="#">🔸 سئو</a>
+                            <a href="#">🔸 پشتیبانی</a>
+                        </div>
+                    </div>
+
+                    <!-- آیتم ۳ -->
+                    <div class="menu-item">
+                        <div class="menu-header" onclick="toggleMenu(this)">
+                            <span class="title">حساب کاربری</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="sub-menu">
+                            <a href="#">🔹 پروفایل</a>
+                            <a href="#">🔹 تنظیمات</a>
+                            <a href="#">🔹 خروج</a>
+                        </div>
+                    </div>
+
+                    <!-- آیتم ۴ (بدون زیرمنو) -->
+                    <div class="menu-item">
+                        <div class="menu-header" style="cursor:default;">
+                            <span class="title">تماس با ما</span>
+                            <span class="arrow" style="opacity:0.3;">-</span>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="btn btn-outline-primary btn-block mt-3 rounded-5"><i class="fa-duotone fa-user-plus"></i> ورود به سایت </button>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light p-3">
+                <a href="#" id="menu-toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <form class="d-flex" role="search">
+                    <button class="btn btn-outline-primary rounded-5 me-1"><i class="fa-duotone fa-moon"></i></button>
+                    <input class="form-control me-2 rounded-5" type="search" placeholder="جستجو در سایت ..."
+                        aria-label="Search" />
+                </form>
+            </nav>
+
+            <div class="container mt-5">
+                <!-- Section Courses -->
+                <h1 class="fs-2 font-bold mb-3">دوره آموزشی</h1>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card rounded-3">
+                            <div class="card-body">
+                                <figure>
+                                    <img src="img/Laravel-13-Rayium.png" class="img-100 rounded-3" alt="" srcset="">
+                                </figure>
+                                <h2 class="fs-3 mt-3 mb-3">دوره ساخت فروشگاه فایل با لاراول ۱۳</h2>
+                                <p class="text-muted">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                    استفاده از طراحان گرافیک است.</p>
+                                <div class="text-center text-success">
+                                    <h2 class="fs-3 font-bold">9,000,000 تومان</h2>
+                                </div>
+                                <div class="btn btn-primary btn-block mt-3 rounded-5">
+                                    مشاهده دوره
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card rounded-3">
+                            <div class="card-body">
+                                <figure>
+                                    <img src="img/Laravel-13-Rayium.png" class="img-100 rounded-3" alt="" srcset="">
+                                </figure>
+                                <h2 class="fs-3 mt-3 mb-3">دوره ساخت فروشگاه فایل با لاراول ۱۳</h2>
+                                <p class="text-muted">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                    استفاده از طراحان گرافیک است.</p>
+                                <div class="text-center text-success">
+                                    <h2 class="fs-3 font-bold">9,000,000 تومان</h2>
+                                </div>
+                                <div class="btn btn-primary btn-block mt-3 rounded-5">
+                                    مشاهده دوره
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card rounded-3">
+                            <div class="card-body">
+                                <figure>
+                                    <img src="img/Laravel-13-Rayium.png" class="img-100 rounded-3" alt="" srcset="">
+                                </figure>
+                                <h2 class="fs-3 mt-3 mb-3">دوره ساخت فروشگاه فایل با لاراول ۱۳</h2>
+                                <p class="text-muted">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                    استفاده از طراحان گرافیک است.</p>
+                                <div class="text-center text-success">
+                                    <h2 class="fs-3 font-bold">9,000,000 تومان</h2>
+                                </div>
+                                <div class="btn btn-primary btn-block mt-3 rounded-5">
+                                    مشاهده دوره
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card rounded-3">
+                            <div class="card-body">
+                                <figure>
+                                    <img src="img/Laravel-13-Rayium.png" class="img-100 rounded-3" alt="" srcset="">
+                                </figure>
+                                <h2 class="fs-3 mt-3 mb-3">دوره ساخت فروشگاه فایل با لاراول ۱۳</h2>
+                                <p class="text-muted">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                                    استفاده از طراحان گرافیک است.</p>
+                                <div class="text-center text-success">
+                                    <h2 class="fs-3 font-bold">9,000,000 تومان</h2>
+                                </div>
+                                <div class="btn btn-primary btn-block mt-3 rounded-5">
+                                    مشاهده دوره
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Section Blog -->
+                <div class="mt-5">
+                    <h1 class="fs-2 font-bold mb-3">وبلاگ</h1>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card rounded-3 mb-2">
+                                <div class="card-body">
+                                    <figure>
+                                        <img src="img/HarmonyOS.png" class="img-100 rounded-3" alt="" srcset="">
+                                    </figure>
+                                    <h2 class="fs-3 font-bold mt-3 mb-3">آیا گوگل ناخواسته در حال ایجاد فرصت برای
+                                        HarmonyOS است؟</h2>
+                                    <p class="text-muted">اندروید سال‌ ها به خاطر آزادی عمل کاربران و توسعه‌ دهندگان
+                                        محبوب بود؛ امکان نصب برنامه از منابع مختلف، فروشگاه ‌های جایگزین و انعطاف ‌پذیری
+                                        بالا از مهم‌ترین مزایای آن محسوب می‌شد. اما اگر گوگل به محدود کردن نصب برنامه‌ …
+                                    </p>
+                                    <div class="mt-3">
+                                        <i class="fa-duotone fa-heart text-danger"></i> 100
+                                        <div class="float-left">
+                                            <i class="fa-duotone fa-comment"></i> 50
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card rounded-3 mb-2">
+                                <div class="card-body">
+                                    <figure>
+                                        <img src="img/HarmonyOS.png" class="img-100 rounded-3" alt="" srcset="">
+                                    </figure>
+                                    <h2 class="fs-3 font-bold mt-3 mb-3">آیا گوگل ناخواسته در حال ایجاد فرصت برای
+                                        HarmonyOS است؟</h2>
+                                    <p class="text-muted">اندروید سال‌ ها به خاطر آزادی عمل کاربران و توسعه‌ دهندگان
+                                        محبوب بود؛ امکان نصب برنامه از منابع مختلف، فروشگاه ‌های جایگزین و انعطاف ‌پذیری
+                                        بالا از مهم‌ترین مزایای آن محسوب می‌شد. اما اگر گوگل به محدود کردن نصب برنامه‌ …
+                                    </p>
+                                    <div class="mt-3">
+                                        <i class="fa-duotone fa-heart text-danger"></i> 100
+                                        <div class="float-left">
+                                            <i class="fa-duotone fa-comment"></i> 50
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card rounded-3 mb-2">
+                                <div class="card-body">
+                                    <figure>
+                                        <img src="img/HarmonyOS.png" class="img-100 rounded-3" alt="" srcset="">
+                                    </figure>
+                                    <h2 class="fs-3 font-bold mt-3 mb-3">آیا گوگل ناخواسته در حال ایجاد فرصت برای
+                                        HarmonyOS است؟</h2>
+                                    <p class="text-muted">اندروید سال‌ ها به خاطر آزادی عمل کاربران و توسعه‌ دهندگان
+                                        محبوب بود؛ امکان نصب برنامه از منابع مختلف، فروشگاه ‌های جایگزین و انعطاف ‌پذیری
+                                        بالا از مهم‌ترین مزایای آن محسوب می‌شد. اما اگر گوگل به محدود کردن نصب برنامه‌ …
+                                    </p>
+                                    <div class="mt-3">
+                                        <i class="fa-duotone fa-heart text-danger"></i> 100
+                                        <div class="float-left">
+                                            <i class="fa-duotone fa-comment"></i> 50
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card rounded-3 mb-2">
+                                <div class="card-body">
+                                    <figure>
+                                        <img src="img/HarmonyOS.png" class="img-100 rounded-3" alt="" srcset="">
+                                    </figure>
+                                    <h2 class="fs-3 font-bold mt-3 mb-3">آیا گوگل ناخواسته در حال ایجاد فرصت برای
+                                        HarmonyOS است؟</h2>
+                                    <p class="text-muted">اندروید سال‌ ها به خاطر آزادی عمل کاربران و توسعه‌ دهندگان
+                                        محبوب بود؛ امکان نصب برنامه از منابع مختلف، فروشگاه ‌های جایگزین و انعطاف ‌پذیری
+                                        بالا از مهم‌ترین مزایای آن محسوب می‌شد. اما اگر گوگل به محدود کردن نصب برنامه‌ …
+                                    </p>
+                                    <div class="mt-3">
+                                        <i class="fa-duotone fa-heart text-danger"></i> 100
+                                        <div class="float-left">
+                                            <i class="fa-duotone fa-comment"></i> 50
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card rounded-3 mb-3">
+                                <div class="card-body">
+                                    <h2 class="fs-3 font-bold"><i class="fa-duotone fa-circle-dot"></i> آخرین نوشته
+                                    </h2>
+                                    <ul class="mt-3">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card rounded-3 mb-3">
+                                <div class="card-body">
+                                    <h2 class="fs-3 font-bold"><i class="fa-duotone fa-comments"></i> آخرین نظرات </h2>
+                                    <ul class="mt-3">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                        <hr class="mb-2">
+                                        <li class="mb-2">
+                                            <a href="#">آیا گوگل ناخواسته در حال ایجاد فرصت برای HarmonyOS است؟</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Script -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

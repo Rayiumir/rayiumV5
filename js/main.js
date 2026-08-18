@@ -78,7 +78,6 @@ $("#menu-toggle").click(function(e) {
     $("#wrapper").toggleClass("toggled");
 });
 
-//
 
 // Enhanced Tab switching functionality with automatic initialization
 document.addEventListener('DOMContentLoaded', function() {
@@ -145,17 +144,7 @@ document.addEventListener('click', function(e) {
 });
 
 function toggleMenu(header) {
-        // بستن سایر منوها (اختیاری)
-        // اگر می‌خواهید فقط یکی باز باشد، این بخش را فعال کنید:
-        // document.querySelectorAll('.menu-header').forEach(h => {
-        //     if (h !== header) {
-        //         h.classList.remove('active');
-        //         h.nextElementSibling.classList.remove('open');
-        //     }
-        // });
-
-        // تغییر وضعیت منوی کلیک‌شده
-        header.classList.toggle('active');
-        const subMenu = header.nextElementSibling;
-        subMenu.classList.toggle('open');
-    }
+    header.classList.toggle('active');
+    const subMenu = header.nextElementSibling;
+    subMenu.classList.toggle('open');
+}

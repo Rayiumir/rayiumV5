@@ -1,3 +1,13 @@
+/* 
+Theme Name: راییوم
+Theme URI: https://www.rayium.ir/
+Author: Raymond Baghumian
+Author URI: https://www.rayium.ir/
+Description: قالب آموزشی راییوم
+Version: 5.0
+License: GNU General Public License v2 or later
+*/
+
 @font-face {
     font-family: Estedad;
     src: url('../rayium/fonts/Estedad-Regular.woff2') format('woff2');

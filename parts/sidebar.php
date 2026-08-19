@@ -11,7 +11,7 @@
             <div class="menu-item">
                 <div class="menu-header" onclick="toggleMenu(this)">
                     <span class="title">محصولات</span>
-                    <span class="arrow">▼</span>
+                    <span class="arrow"><i class="fa-duotone fa-angles-down"></i></span>
                 </div>
                 <div class="sub-menu">
                     <a href="#">🔹 گوشی موبایل</a>
@@ -25,7 +25,7 @@
             <div class="menu-item">
                 <div class="menu-header" onclick="toggleMenu(this)">
                     <span class="title">خدمات</span>
-                    <span class="arrow">▼</span>
+                    <span class="arrow"><i class="fa-duotone fa-angles-down"></i></span>
                 </div>
                 <div class="sub-menu">
                     <a href="#">🔸 طراحی وب</a>
@@ -38,7 +38,7 @@
             <div class="menu-item">
                 <div class="menu-header" onclick="toggleMenu(this)">
                     <span class="title">حساب کاربری</span>
-                    <span class="arrow">▼</span>
+                    <span class="arrow"><i class="fa-duotone fa-angles-down"></i></span>
                 </div>
                 <div class="sub-menu">
                     <a href="#">🔹 پروفایل</a>

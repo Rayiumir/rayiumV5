@@ -29,6 +29,13 @@ function Rayium_styles(){
     );
 
     wp_enqueue_style(
+        'like', 
+        RAYIUM_URI . '/css/like.css',
+        '1.0.0'
+    );
+
+
+    wp_enqueue_style(
         'style', 
         RAYIUM_STYLE,
         '5.0.0'
@@ -46,5 +53,17 @@ function Rayium_scripts(){
         $deps,
         '5.0.0'
     );
+
+    wp_enqueue_script(
+        'like',
+        RAYIUM_URI . '/js/like.js',
+        $deps,
+        '1.0.0'
+    );
+
+    wp_localize_script( 'like', 'ajax_var', array(
+        'url'   => admin_url( 'admin-ajax.php' ),
+        'nonce' => wp_create_nonce( 'ajax-nonce' ),
+    ) );
 
 };

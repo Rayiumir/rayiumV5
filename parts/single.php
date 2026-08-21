@@ -5,11 +5,50 @@
         <div class="col-md-8">
             <article class="card rounded-3 mb-2">
                 <div class="card-body">
-                    <a href="<?php the_permalink(); ?>" class="">
-                        <?php echo the_post_thumbnail('full', ['class' => 'img-100 rounded-3']);?>
-                        <h2 class="fs-3 font-bold mt-3 mb-3"><?php the_title();?></h2>
-                        <?php the_content(); ?>
-                    </a>
+                    <?php echo the_post_thumbnail('full', ['class' => 'img-100 rounded-3']);?>
+                    <h2 class="fs-3 font-bold mt-3 mb-3"><?php the_title();?></h2>
+                    <?php the_content(); ?>
+
+                    <div class="text-center mt-4 mb-4">
+                        <?php
+                            $wordpress = get_post_meta($post->ID, 'wordpress', true);
+                            $github = get_post_meta($post->ID, 'github', true);
+                            $download = get_post_meta($post->ID, 'download', true);
+                            $eyes = get_post_meta($post->ID, 'eyes', true);
+                            $links = get_post_meta($post->ID, 'links', true);
+                        ?>
+
+                        <?php if(!empty($wordpress)){ ?>
+                            <a href="<?php echo $wordpress; ?>" class="btn btn-outline-info rounded-5"><i class="fa-brands fa-wordpress"></i> مخزن وردپرس </a>
+                        <?php
+                            } 
+                        ?>
+
+                        <?php if(!empty($github)){ ?>
+                            <a href="<?php echo $github; ?>" class="btn btn-outline-dark rounded-5"><i class="fa-brands fa-github"></i> گیت هاب </a>
+                        <?php
+                            } 
+                        ?>
+
+                        <?php if(!empty($download)){ ?>
+                            <a href="<?php echo $download; ?>" class="btn btn-outline-primary rounded-5"><i class="fa-duotone fa-download"></i> دانلود فایل </a>
+                        <?php
+                            } 
+                        ?>
+
+                        <?php if(!empty($eyes)){ ?>
+                            <a href="<?php echo $eyes; ?>" class="btn btn-outline-success rounded-5"><i class="fa-duotone fa-eye"></i> پیش نمایش </a>
+                        <?php
+                            } 
+                        ?>
+                    </div>
+                    <?php if(!empty($links)){ ?>
+                        <a href="<?php echo $links; ?>">
+                            <span class="badge bg-secondary text-white mb-2"><i class="fa-duotone fa-link"></i> پیوند منابع</span>
+                        </a>
+                    <?php
+                        } 
+                    ?>
                     <div class="mt-3">
                         <i class="fa-duotone fa-solid fa-list-tree"></i> <?php the_category(',') ?>
                         <i class="fa-duotone fa-solid fa-calendar"></i> <?php the_time('M/d/Y') ?>

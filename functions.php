@@ -7,6 +7,7 @@ define("RAYIUM_INC", RAYIUM_PATH . "inc/");
 define("RAYIUM_ADMIN", RAYIUM_INC . "admin/");
 
 require_once RAYIUM_INC . "enqueue.php";
+require_once RAYIUM_INC . "metaboxblog.php";
 require_once "like.php";
 
 // Post Thumbnails

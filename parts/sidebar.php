@@ -1,7 +1,7 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading text-center mt-3">
         <figure class="imgLogo">
-            <img src="img/Rayium_light.png" style="width: 200px; height: auto;" alt="" srcset="">
+            <img src="<?php echo RAYIUM_URI; ?>/img/Rayium_light.png" style="width: 200px; height: auto;" alt="" srcset="">
         </figure>
     </div>
     <div class="mt-3 p-3">

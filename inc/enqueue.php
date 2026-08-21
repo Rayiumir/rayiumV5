@@ -63,7 +63,7 @@ function Rayium_scripts(){
 
     wp_localize_script( 'like', 'ajax_var', array(
         'url'   => admin_url( 'admin-ajax.php' ),
-        'nonce' => wp_create_nonce( 'ajax-nonce' ),
+        'nonce' => wp_create_nonce( 'ajax-nonce' )
     ) );
 
 };

@@ -16,7 +16,6 @@ if(function_exists("add_theme_support")){
 }
 
 // View Posts
-
 function set_post_views_field() {
     
     if(is_single()){
@@ -54,3 +53,19 @@ function get_post_view_count($post_id){
     $count = get_post_meta($post_id, "post_view_count", true);
     return $count ? $count : 0;
 }
+
+// Widgets
+function Rayium_widgets(){
+    register_sidebar(
+        array(
+            'name' => 'ابزارک سمت چپ',
+            'id' => 'sidebar',
+            'description' => 'محل قرار گیری ابزارک های آماده',
+            'before_widget' => '<div class="card rounded-3 mb-3"><div class="card-body">',
+            'after_widget' => '</div></div>',
+            'before_title' => '<h5><i class="fa-duotone fa-circle-dot ms-2"></i>',
+            'after_title' => '</h5>'
+        )
+    );
+}
+add_action('widgets_init', 'Rayium_widgets');

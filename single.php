@@ -5,7 +5,7 @@
             <?php echo get_template_part('parts/navbar'); ?>
              <main class="container mt-5">
                 <?php echo get_template_part('parts/courses'); ?>
-                <?php echo get_template_part('parts/single'); ?>
+                <?php echo get_template_part('parts/posts/single'); ?>
              </main>
         </div>
     </div>

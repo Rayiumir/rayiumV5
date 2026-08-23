@@ -15,9 +15,9 @@ require_once RAYIUM_INC . "options.php";
 require_once RAYIUM_INC . "functions-register.php";
 require_once RAYIUM_INC . "functions-course.php";
 require_once RAYIUM_INC . "payments.php";
-require_once('pagination.php');
-require_once('navbar.php');
-require_once('stats.php');
+// require_once('pagination.php');
+// require_once('navbar.php');
+// require_once('stats.php');
 require_once "like.php";
 if(is_admin()){
     require_once RAYIUM_INC . "metabox.php";

@@ -40,7 +40,7 @@ function rayium_fields_callback($post){
     <?php
 }
 
-function rayium_fields_save($post_id){ 
+function rayium_post_save($post_id){ 
     $is_autosave = wp_is_post_autosave($post_id);
     $is_revision = wp_is_post_revision($post_id);
     $is_valid_nonce = (isset($_POST['rayium_security_nonce']) && wp_verify_nonce($_POST['rayium_security_nonce'], basename(__FILE__))) ? 'true' : 'false';
@@ -69,4 +69,4 @@ function rayium_fields_save($post_id){
         update_post_meta($post_id, 'links', $_POST['links']);
     }
 }
-add_action('save_post', 'rayium_fields_save');
+add_action('save_post', 'rayium_post_save');

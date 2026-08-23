@@ -164,3 +164,13 @@ function estimate_study_duration(){
     return $estimate_duration_html;
 }
 add_shortcode('studyduration', 'estimate_study_duration');
+
+// Display New Badge Posts
+function display_new_badge($post_id) {
+    $post_date = get_the_date('Y-m-d', $post_id);
+    $current_date = current_time('Y-m-d');
+    $days_diff = (strtotime($current_date) - strtotime($post_date)) / (60 * 60 * 24);
+    if ($days_diff < 3) {
+        echo '<span class="badge text-bg-secondary">جدید</span>';
+    }
+}

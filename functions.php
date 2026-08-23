@@ -174,3 +174,15 @@ function display_new_badge($post_id) {
         echo '<span class="badge text-bg-secondary">جدید</span>';
     }
 }
+
+// fields Profie User
+function contact_methods($profile_fields){
+    $profile_fields['linkedin'] = 'لینکدین';
+    $profile_fields['cv'] = 'رزومه';
+    $profile_fields['whatsapp'] = 'واتس آپ';
+    $profile_fields['twitter'] = 'توئیتر';
+    $profile_fields['telegram'] = 'تلگرام';
+    $profile_fields['instagram'] = 'اینستاگرام';
+    return $profile_fields; 
+}
+add_filter('user_contactmethods','contact_methods');

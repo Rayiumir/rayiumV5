@@ -106,3 +106,22 @@ function remove_site_health_menu(){
     remove_submenu_page( 'tools.php','site-health.php' );
 }
 add_filter( 'wp_fatal_error_handler_enabled', '__return_false' );
+
+// Lazy Load
+function rayium_lazy_load_images( $content ) {
+
+    if ( is_singular() && in_the_loop() && is_main_query() ) {
+        $content = preg_replace_callback( '/<img[^>]+>/', function( $matches ) {
+
+            if( false === strpos( $matches[ 0 ], 'loading=' ) ) {
+                $matches[ 0 ] = str_replace( '<img', '<img loading="lazy"', $matches[ 0 ] );
+            }
+
+            return $matches[ 0 ];
+
+        }, $content );
+    }
+
+    return $content;
+}
+add_filter( 'the_content', 'rayium_lazy_load_images' );

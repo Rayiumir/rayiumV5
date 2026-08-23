@@ -186,3 +186,12 @@ function contact_methods($profile_fields){
     return $profile_fields; 
 }
 add_filter('user_contactmethods','contact_methods');
+
+// Activation Page Option Tree
+add_filter( 'ot_show_new_layout', '__return_false' );
+add_filter( 'ot_show_pages', '__return_false' );
+add_filter( 'ot_theme_mode', '__return_true' );
+add_filter( 'ot_meta_boxes', '__return_true' );
+include_once( 'option/option-tree/ot-loader.php' );
+include_once( 'option/theme-options.php' );
+// include_once( 'option/theme-metabox.php' );

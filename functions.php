@@ -94,3 +94,15 @@ function remove_jquery_migrate( $scripts ) {
     }
 }
 add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
+
+// Remove Site Health
+function themeprefix_remove_dashboard_widget() {
+    remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' );
+}
+add_action('wp_dashboard_setup', 'themeprefix_remove_dashboard_widget' );
+add_action( 'admin_menu', 'remove_site_health_menu' );
+
+function remove_site_health_menu(){
+    remove_submenu_page( 'tools.php','site-health.php' );
+}
+add_filter( 'wp_fatal_error_handler_enabled', '__return_false' );

@@ -125,3 +125,28 @@ function rayium_lazy_load_images( $content ) {
     return $content;
 }
 add_filter( 'the_content', 'rayium_lazy_load_images' );
+
+// Add Table of Contents to Posts
+function add_table_of_contents($content) {
+    if (is_singular('post') && is_main_query()) {
+        $pattern = '/<h([2-6]).*?>(.*?)<\/h[2-6]>/';
+        if (preg_match_all($pattern, $content, $matches, PREG_SET_ORDER)) {
+            $output = '<div class="card mt-4 mb-4 rounded-5 p-2"><details class="js-list">';
+            $output .= '<summary class="title js-title"><i class="fa-duotone fa-list-dots mt-1"></i> <h3 class="fs-4 mt-1 me-2">فهرست محتوا</h3> <span class="icons ms-4 mt-3"></span></summary>';
+            $output .= '<div class="content js-content"><ul class="mt-3">';
+            foreach ($matches as $match) {
+                $level = $match[1];
+                $title = $match[2];
+                $slug = sanitize_title($title);
+                $output .= '<li class="mb-2 toc-level-' . $level . '"><a href="#' . $slug . '">' . $title . '</a></li>';
+                $content = str_replace($match[0], '<h' . $level . ' id="' . $slug . '">' . $title . '</h' . $level . '>', $content);
+            }
+            $output .= '</ul></div>';
+            $output .= '</details></div>';
+            $content = $output . $content;
+        }
+    }
+    return $content;
+}
+
+add_filter('the_content', 'add_table_of_contents');

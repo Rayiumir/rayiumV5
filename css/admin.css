@@ -1,0 +1,65 @@
+.rayium_discount_base{
+    display: none;
+}
+.rayium_has_discount .rayium_discount_base{
+    display: table-row;
+}
+
+div#Rayium_course_field table tbody tr td:nth-child(even) input[type='url'],
+div#Rayium_course_field table tbody tr td:nth-child(even) input[type='number'],
+div#Rayium_course_field table tbody tr td:nth-child(even) input[type='text'],
+div#Rayium_course_field table tbody tr td:nth-child(even) select{
+    width: 400px;
+}
+
+/* پلی لیست */
+table.rm_playlist_table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table.rm_playlist_table input{
+    width: 100%;
+}
+table.rm_playlist_table tbody tr:nth-child(even){
+    background: #f2f2f2;
+}
+
+table.rm_playlist_table td:not(.rayium_playlist_input){
+    text-align: center;
+}
+
+table.rm_playlist_table .dashicons-trash{
+    cursor: pointer;
+    color: red;
+}
+table.rm_playlist_table .dashicons-move{
+    cursor: move;
+}
+table.rm_playlist_table tr{
+    transition: 0.3s;
+}
+table.rm_playlist_table tr.deleting{
+    background: #ffcaca;
+}
+
+img.rm_spinner{
+    display: none;
+}
+
+tr.calculating img.rm_spinner{
+    display: inline;
+}
+
+tr.calculating .rayium_duration{
+    display: none;
+}
+
+body.post-type-course_register a.page-title-action{
+    display: none;
+}
+
+table#course_register_table tr td{
+    padding: 10px;
+}
+
+

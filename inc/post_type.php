@@ -292,3 +292,13 @@ function register_products() {
     );
 }
 add_action('init', 'register_products');
+
+function rayium_add_failed_status()
+{
+    global $post;
+    if($post && $post->post_type == 'course_register'){
+        include RAYIUM_PATH . 'inc/admin/post_status.php';
+    }
+    
+}
+add_action('admin_footer', 'rayium_add_failed_status');

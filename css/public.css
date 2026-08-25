@@ -1,0 +1,19 @@
+
+.rayium-item .rayium-pause{
+    display: none;
+}
+
+.rayium-item.playing .rayium-pause{
+    display: inline;
+}
+.rayium-item.playing .rayium-play{
+    display: none;
+}
+.rayium-item.playing{
+    background: #2ecc71 !important;
+    color: #ffffff;
+}
+span.percent {
+    position: absolute;
+    margin: 5px;
+}

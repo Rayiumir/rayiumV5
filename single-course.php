@@ -1,8 +1,11 @@
 <?php get_header(); ?>
-<main class="container">
-    <?php
-        get_template_part('parts/header');
-        get_template_part('parts/courses/single');
-    ?>
-</main>
-<?php get_footer(); ?>
+    <div class="d-flex" id="wrapper">
+        <?php echo get_template_part('parts/sidebar'); ?>
+        <div id="page-content-wrapper">
+            <?php echo get_template_part('parts/navbar'); ?>
+             <main class="container mt-5">
+                <?php echo get_template_part('parts/courses/single'); ?>
+             </main>
+        </div>
+    </div>
+<?php get_footer();?>

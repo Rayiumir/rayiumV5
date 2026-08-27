@@ -82,10 +82,9 @@ a#menu-toggle {
 }
 
 figure.avatar img {
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
     border: 1px solid #e8e8e8;
+    display: inline;
 }
 
 /* Logo */
@@ -316,4 +315,41 @@ figure.wp-block-image img{
 
 .fa-square-x-twitter:hover {
     color: #000000;
+}
+
+/* Courses */
+.cprice {
+    padding: 10px;
+    font-family: "Lalezar";
+}
+
+.bap,
+.count-student {
+    font-family: "Lalezar";
+}
+
+.times,
+.counts {
+    font-size: 0.8rem;
+}
+
+del {
+    display: block;
+    font-size: medium;
+}
+
+ins {
+    text-decoration: none;
+}
+
+.titlesidebar {
+    display: contents;
+}
+
+.card-body ol {
+    margin: 35px;
+}
+
+.bio i {
+    margin: 5px;
 }

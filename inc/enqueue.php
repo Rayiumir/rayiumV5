@@ -34,6 +34,11 @@ function Rayium_styles(){
         '1.0.0'
     );
 
+	wp_enqueue_style(
+        'listvideos', 
+        RAYIUM_URI . '/css/listvideos.css',
+        RAYIUM_ASSETS_VERSION
+    );
 
     wp_enqueue_style(
         'style', 
@@ -53,6 +58,14 @@ function Rayium_scripts(){
         $deps,
         RAYIUM_ASSETS_VERSION
     );
+
+	wp_enqueue_script(
+        'listvideos', 
+        RAYIUM_URI . '/js/listvideos.js',
+        $deps,
+        RAYIUM_ASSETS_VERSION
+    );
+
 
     wp_enqueue_script(
         'like',

@@ -35,8 +35,42 @@
                                 'sizes' => '(max-width: 768px) 100vw, 50vw'
                             ]) 
                         ?>
-                        </figure>
-                    <h2 class="fs-3 mt-3 mb-3"><?php the_title(); ?></h2>
+                    </figure>
+                    <div class="mt-1">
+                        <?php
+                            $text7 = get_post_meta($post->ID, 'text7', true);
+                            if(!empty($text7)) { 
+                        ?>
+                        <span class="badge text-white bg-primary bap2 rounded-4 mb-3">
+                            <i class="fa-duotone fa-signal-bars-good"></i> <?php echo $text7; ?>
+                        </span>
+                        <?php } ?>
+                        <?php
+                            $text5 = get_post_meta($post->ID, 'text5', true);
+                            if(!empty($text5)) { 
+                        ?>
+                        <span class="badge text-white bg-secondary bap3 rounded-4 mb-3">
+                            <i class="fa-duotone fa-circle-dot"></i> <?php echo $text5; ?>
+                        </span>
+                        <?php }else{ ?>
+                            <span class="badge text-white bg-success bap3 rounded-4 mb-3">
+                                <i class="fa-duotone fa-circle-dot"></i> در حال ضبط
+                            </span>
+                        <?php } ?>
+
+                        <h2 class="fs-3 mt-2 mb-3"><?php the_title(); ?></h2>
+
+                        <div class="row">
+                            <div class="col font-bold">
+                                <i class="fa-duotone fa-timer"></i> 
+                                <?php echo rayium_second_to_time($duration_total) ?> 
+                            </div>
+                            <div class="col text-right font-bold">
+                                <i class="fa-duotone fa-users"></i> 
+                                <?php echo $student_count; ?> دانشجو 
+                            </div>
+                        </div>
+                    </div>
                     <div class="text-center cprice <?php echo $percent ? 'rm_has_discount' : '' ?>">
                         <?php if($percent) : ?>
                             <del class="text-danger font-bold fs-5"><?php echo number_format($price / 10 ); ?></del>

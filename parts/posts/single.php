@@ -5,7 +5,17 @@
         <div class="col-md-8">
             <article class="card rounded-3 mb-2">
                 <div class="card-body">
-                    <?php echo the_post_thumbnail('full', ['class' => 'img-100 rounded-3']);?>
+                    <figure>
+                        <?php 
+                            echo the_post_thumbnail('large', [
+                                'class' => 'img-100 rounded-3 ', 
+                                'loading' => 'lazy', 
+                                'alt' => esc_attr(get_the_title()),
+                                'decoding' => 'async',
+                                'sizes' => '(max-width: 768px) 100vw, 50vw'
+                            ]) 
+                        ?>
+                    </figure>
                     <h2 class="fs-3 font-bold mt-3 mb-3"><?php the_title();?></h2>
                     <?php the_content(); ?>
 

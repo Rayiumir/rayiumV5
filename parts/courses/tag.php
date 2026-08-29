@@ -37,7 +37,15 @@
                                 <i class="fa-duodone fa-percent"></i><?php echo $percent; ?> تخفیف
                             </span>
                         <?php endif; ?>
-                        <?php echo the_post_thumbnail('medium', ['class' => 'img-fluid rounded-4', 'loading' => 'lazy', 'alt' => esc_attr( get_the_title() ), 'title' => esc_attr( get_the_title() )]) ?>
+                        <?php 
+                            echo the_post_thumbnail('large', [
+                                'class' => 'img-100 rounded-3 ', 
+                                'loading' => 'lazy', 
+                                'alt' => esc_attr(get_the_title()),
+                                'decoding' => 'async',
+                                'sizes' => '(max-width: 768px) 100vw, 50vw'
+                            ]) 
+                        ?>
                     </figure>
                     <div class="mt-1">
                         <?php

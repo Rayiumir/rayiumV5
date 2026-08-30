@@ -2,7 +2,7 @@
 <section id="courses" class="mt-5 mb-5">
     <div class="container">
         <header class="mb-4 text-center">
-            <h2 class="titlec">دوره‌ها</h2>
+            <h2 class="titlec">برچسب دوره‌ها</h2>
             <p class="text-muted">دوره‌های منتخب ما برای یادگیری مهارت‌های کاربردی</p>
         </header>
         <div class="row">
@@ -12,7 +12,7 @@
                     'posts_per_page'=>10,
                     'tax_query' => array(
                         array(
-                            'taxonomy' => 'course_cat',
+                            'taxonomy' => 'course_tag',
                             'field'    => 'term_id',
                             'terms'    => get_queried_object_id(),
                         ),

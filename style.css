@@ -353,3 +353,9 @@ ins {
 .bio i {
     margin: 5px;
 }
+
+/* Profile User */
+
+.avatar{
+    text-align: -webkit-center;
+}

@@ -240,7 +240,6 @@ add_shortcode('playlist_items', 'handle_download');
 
 // Post Type Product
 function register_products() {
-    
 	// Product
     register_post_type('product',
         array(

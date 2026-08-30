@@ -56,6 +56,23 @@
             </div>
 
         </div>
-        <button class="btn btn-outline-primary btn-block mt-3 rounded-5"><i class="fa-duotone fa-user-plus"></i> ورود به سایت </button>
+        <?php 
+            global $user_ID;
+            if($user_ID){ ?>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="<?php echo site_url(); ?>/customers" class="btn btn-outline-success fs-1 btn-block rounded-5 ms-2" title="نمایه کاربر">
+                            <i class="fa-duotone fa-user"></i>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="<?php echo site_url(); ?>/wp-login.php?action=logout" class="btn btn-outline-danger fs-1 btn-block rounded-5" title="خروج">
+                            <i class="fa-duotone fa-sign-out"></i>
+                        </a>
+                    </div>
+                </div>
+        <?php }else{ ?>
+                <?php echo do_shortcode("[authora-login]"); ?>
+        <?php } ?>
     </div>
 </div>

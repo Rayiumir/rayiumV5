@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ادمین رنجر</title>
     <?php wp_head(); ?>
+    <meta name="description" content="<?php 
+        if (is_single() || is_page()) {
+            echo get_the_excerpt();
+        } else {
+            bloginfo('description');
+        }
+    ?>">
 </head>
 
 <body <?php body_class(); ?>>

@@ -130,21 +130,3 @@ function rayium_fail_register($course_id, $error_message){
         ]
     ]);
 }
-
-// function rayium_get_bitpay_error_message($error_code)
-// {
-//     $messages = [
-//         -1 => 'APIارسالی با نوعAPIتعریف شده درbitpay
-//         سازگار نیست',
-//         -2 => 'trans_idشده ارسال،عددي داده
-//         نمیباشد',
-//         -3 => 'id_getشده ارسال،عددي داده
-//         نمیباشد',
-//         -4 => 'تراکنشی در پایگاه وجود ندارد و یا
-//         موفقیت آمیز نبودهاست',
-//         1 => 'تراکنش موفقیت آمیز بوده است',
-//         11 => 'تراکنش از قبل تاییده شده است',
-//     ];
-
-//     return isset($messages[$error_code]) ? $messages[$error_code] : 'خطای ناشناخته';
-// }

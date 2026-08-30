@@ -2,7 +2,7 @@
 <section id="courses" class="mt-5 mb-5">
     <div class="container">
         <header class="mb-4 text-center">
-            <h2 class="titlec">دوره‌ها</h2>
+            <h2 class="titlec">دسته بندی دوره‌ها</h2>
             <p class="text-muted">دوره‌های منتخب ما برای یادگیری مهارت‌های کاربردی</p>
         </header>
         <div class="row">

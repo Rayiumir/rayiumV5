@@ -16,7 +16,7 @@ require_once RAYIUM_INC . "functions-register.php";
 require_once RAYIUM_INC . "functions-course.php";
 require_once RAYIUM_INC . "payments.php";
 require_once('pagination.php');
-// require_once('navbar.php');
+require_once('navbar.php');
 // require_once('stats.php');
 require_once "like.php";
 if(is_admin()){
@@ -201,3 +201,10 @@ function disable_widgets_block_editor() {
 	remove_theme_support( 'widgets-block-editor' );
 }
 add_action( 'after_setup_theme', 'disable_widgets_block_editor' );
+
+function register_my_menus() {
+    register_nav_menus(array(
+        'primary-menu' => 'موقعیت سایدبار',
+    ));
+}
+add_action('init', 'register_my_menus');

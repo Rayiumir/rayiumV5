@@ -5,61 +5,20 @@
         </figure>
     </div>
     <div class="mt-3 p-3">
-        <div class="menu-container">
-
-            <!-- آیتم ۱ -->
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleMenu(this)">
-                    <span class="title">محصولات</span>
-                    <span class="arrow"><i class="fa-duotone fa-angles-down"></i></span>
-                </div>
-                <div class="sub-menu">
-                    <a href="#">🔹 گوشی موبایل</a>
-                    <a href="#">🔹 لپ‌تاپ</a>
-                    <a href="#">🔹 تبلت</a>
-                    <a href="#">🔹 هدفون</a>
-                </div>
-            </div>
-
-            <!-- آیتم ۲ -->
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleMenu(this)">
-                    <span class="title">خدمات</span>
-                    <span class="arrow"><i class="fa-duotone fa-angles-down"></i></span>
-                </div>
-                <div class="sub-menu">
-                    <a href="#">🔸 طراحی وب</a>
-                    <a href="#">🔸 سئو</a>
-                    <a href="#">🔸 پشتیبانی</a>
-                </div>
-            </div>
-
-            <!-- آیتم ۳ -->
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleMenu(this)">
-                    <span class="title">حساب کاربری</span>
-                    <span class="arrow"><i class="fa-duotone fa-angles-down"></i></span>
-                </div>
-                <div class="sub-menu">
-                    <a href="#">🔹 پروفایل</a>
-                    <a href="#">🔹 تنظیمات</a>
-                    <a href="#">🔹 خروج</a>
-                </div>
-            </div>
-
-            <!-- آیتم ۴ (بدون زیرمنو) -->
-            <div class="menu-item">
-                <div class="menu-header" style="cursor:default;">
-                    <span class="title">تماس با ما</span>
-                    <span class="arrow" style="opacity:0.3;">-</span>
-                </div>
-            </div>
-
-        </div>
+        <?php
+            wp_nav_menu(array(
+                'theme_location' => 'primary-menu',
+                'walker'         => new Navbar_Walker(),
+                'container'      => 'div',
+                'container_class'=> 'menu-container',
+                'depth'          => 2,
+                'fallback_cb'    => false
+            ));
+        ?>
         <?php 
             global $user_ID;
             if($user_ID){ ?>
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-6">
                         <a href="<?php echo site_url(); ?>/customers" class="btn btn-outline-success fs-1 btn-block rounded-5 ms-2" title="نمایه کاربر">
                             <i class="fa-duotone fa-user"></i>

@@ -22,20 +22,18 @@ class Navbar_Walker extends Walker_Nav_Menu {
         if ($has_children) {
             $output .= '<i class="fa-duotone fa-angles-down"></i>';
         } else {
-            $output .= '<span style="opacity:0.3;">-</span>';
+            $output .= '<span>'.esc_html($icon).'</span>';
         }
         
         $output .= '</span>';
         $output .= '</div>';
         
-        // If no children, close the menu-item div here
         if (!$has_children) {
             $output .= '</div>';
         }
     }
 
     public function end_el(&$output, $item, $depth = 0, $args = array()) {
-        // Close menu-item if it has children (started in start_el)
         if (!empty($args->walker->has_children)) {
             $output .= '</div>';
         }

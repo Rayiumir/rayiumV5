@@ -41,6 +41,6 @@
                 <?php echo bootstrap_pagination(); ?>
             </div>
         </div>
-        <?php get_sidebar();?>
+        <?php get_sidebar('index');?>
     </div>
 </section>

@@ -157,6 +157,19 @@
                 </div>
             </section>
         </div>
-        <?php get_sidebar();?>
+        <aside class="col-md-4">
+            <div class="card rounded-4 border-0 mb-3">
+                <div class="card-body">
+                    <div class="text-center">
+                        <figure class="avatar">
+                            <?php echo get_avatar( get_the_author_meta('user_email'), '80', '' ); ?>
+                        </figure>
+                        <h1 class="fs-2 font-bold mb-3"><?php the_author(); ?></h1>
+                    </div>
+                    <?php the_author_meta('description'); ?>
+                </div>
+            </div>
+            <?php get_sidebar();?>
+        </aside>
     </div>
 </section>

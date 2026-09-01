@@ -5,12 +5,16 @@
         </figure>
     </div>
     <div class="mt-3 p-3">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-outline-primary btn-block rounded-5 mb-4">
+            <i class="fa-duotone fa-home"></i>
+            خانه 
+        </a>
         <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary-menu',
                 'walker'         => new Navbar_Walker(),
                 'container'      => 'div',
-                'container_class'=> 'menu-container',
+                'container_class'=> 'menu-container mb-4',
                 'depth'          => 2,
                 'fallback_cb'    => false
             ));

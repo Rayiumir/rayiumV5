@@ -1,0 +1,261 @@
+:root {
+    /* Background */
+    --bg-light: #f8f9fa;
+    --bg-dark: #0f1722;
+    /* Cold deep blue */
+
+    /* Text */
+    --text-light: #212529;
+    --text-dark: #eaf4ff;
+    /* Icy white */
+
+    /* Cards */
+    --card-light: #ffffff;
+    --card-dark: #16202f;
+    /* Frost surface */
+
+    /* Navigation */
+    --nav-light: #ffffff;
+    --nav-dark: #131c29;
+
+    /* Footer */
+    --footer-light: #f8f9fa;
+    --footer-dark: #131c29;
+
+    /* Borders */
+    --border-light: #dee2e6;
+    --border-dark: #223042;
+
+    /* Primary */
+    --primary-color: #60a5fa;
+    /* Ice blue */
+    --primary-hover: #3b82f6;
+
+    /* Accent */
+    --cyan-soft: #22d3ee;
+    --violet-soft: #818cf8;
+    --pink-soft: #f472b6;
+
+    --white: #f8f9fa;
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .navbar {
+    background-color: var(--nav-dark) !important;
+    border-color: var(--border-dark);
+}
+
+body.dark .navbar-brand,
+body.dark .nav-link,
+body.dark .dropdown-toggle {
+    color: var(--text-dark) !important;
+}
+
+body.dark .navbar-toggler {
+    background-color: var(--nav-dark) !important;
+}
+
+body.dark .card {
+    background-color: var(--card-dark);
+    border-color: var(--border-dark);
+    color: var(--text-dark);
+}
+
+body.dark .comment {
+    background-color: var(--card-dark);
+    border-color: var(--border-dark);
+    color: var(--text-dark);
+}
+
+body.dark #respond {
+    background-color: var(--card-dark);
+    border-color: var(--border-dark);
+    color: var(--text-dark);
+}
+
+
+body.dark ul.dropdown-menu {
+    background-color: var(--card-dark);
+}
+
+body.dark li.menu-item a {
+    color: var(--text-dark);
+}
+
+body.dark #respond h3 {
+    color: var(--text-dark);
+}
+
+
+body.dark .reply {
+    color: var(--text-light);
+}
+
+body.dark .comment-reply-link:hover {
+    color: var(--text-light);
+}
+
+body.dark .card h3,
+body.dark .card .fs-2 {
+    color: var(--text-dark);
+}
+
+body.dark footer {
+    background-color: var(--footer-dark) !important;
+    color: var(--text-dark) !important;
+}
+
+body.dark footer h5,
+body.dark footer .small,
+body.dark footer a {
+    color: var(--text-dark) !important;
+}
+
+body.dark footer .border-light {
+    border-color: var(--border-dark) !important;
+}
+
+body.dark .text-muted {
+    color: #adb5bd !important;
+}
+
+body.dark .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+body.dark .btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+body.dark .icon-cloud .icon {
+    background-color: #2d2d2d;
+}
+
+body.dark .titlec {
+    color: var(--text-dark);
+}
+
+body.dark .here {
+    color: var(--text-dark);
+}
+
+body.dark .simple-toggle-btn {
+    border-color: var(--primary-color);
+}
+
+.fa-moon {
+    color: var(--dark);
+}
+
+.fa-sun {
+    color: var(--yellow);
+}
+
+body.dark .card p {
+    color: var(--card-light);
+}
+
+body.dark a {
+    color: var(--white);
+}
+
+body.dark li a {
+    color: var(--bg-light);
+}
+
+body.dark .btn-light {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark span.sl-count {
+    color: var(--text-dark);
+}
+
+body.dark .lists span {
+    color: var(--text-dark);
+}
+
+
+body.dark .count-student span {
+    color: var(--text-dark);
+}
+
+body.dark #commentform textarea {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark input {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark li.page-item a {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark ul.lists li a {
+    color: var(--text-dark);
+}
+
+body.dark .table-bordered th,
+.table-bordered td {
+    color: var(--text-dark);
+}
+
+body.dark .comment .children .comment-body {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark .carts {
+    background-color: var(--border-dark);
+    color: var(--text-light);
+}
+
+body.dark .authora-container {
+    background-color: var(--border-dark);
+    color: var(--text-dark);
+}
+
+body.dark .rayiumir-product {
+    background-color: var(--border-dark);
+    color: var(--text-dark);
+}
+
+body.dark .comment .children .comment-author {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark .bg-light {
+    background-color: var(--nav-dark) !important;
+    border-color: var(--border-dark);
+}
+
+body.dark .menu-header .title {
+    color: var(--text-dark);
+}
+
+body.dark .menu-header:hover {
+    background-color: var(--nav-dark) !important;
+    border-color: var(--border-dark);
+}
+
+body.dark .sub-menu {
+    background-color: var(--nav-dark) !important;
+    border-color: var(--border-dark);
+}

@@ -40,6 +40,12 @@ function Rayium_styles(){
         RAYIUM_ASSETS_VERSION
     );
 
+	wp_enqueue_style(
+        'darkmode', 
+        RAYIUM_URI . '/css/darkmode.css',
+        RAYIUM_ASSETS_VERSION
+    );
+
     wp_enqueue_style(
         'style', 
         RAYIUM_STYLE,

@@ -1,6 +1,6 @@
 <!-- Section Blog -->
 <section class="mt-5">
-    <h1 class="fs-2 font-bold mb-3">برگه</h1>
+    <h1 class="fs-2 font-bold mb-3">برگه ها</h1>
     <div class="row">
         <div class="col-md-8">
             <?php
@@ -62,6 +62,6 @@
                 }
             ?>
         </div>
-        <?php get_sidebar();?>
+        <?php get_sidebar('index');?>
     </div>
 </section>

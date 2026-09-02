@@ -11,12 +11,38 @@ class Navbar_Walker extends Walker_Nav_Menu {
     }
 
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-        $has_children = !empty($args->walker->has_children);
+        $has_children = !empty($item->classes) && in_array('menu-item-has-children', $item->classes);
         $icon = $depth == 0 ? '🔹' : '▫️';
         
         $output .= '<div class="menu-item">';
         $output .= '<div class="menu-header" onclick="toggleMenu(this)">';
+        
+        // Create the link with the correct URL
+        $attributes = '';
+        if (!empty($item->attr_title)) {
+            $attributes .= ' title="' . esc_attr($item->attr_title) . '"';
+        }
+        if (!empty($item->target)) {
+            $attributes .= ' target="' . esc_attr($item->target) . '"';
+        }
+        if (!empty($item->xfn)) {
+            $attributes .= ' rel="' . esc_attr($item->xfn) . '"';
+        }
+        if (!empty($item->url)) {
+            $attributes .= ' href="' . esc_url($item->url) . '"';
+        }
+        
+        // Add the link with attributes
+        if (!empty($item->url)) {
+            $output .= '<a' . $attributes . ' class="menu-link">';
+        }
+        
         $output .= '<span class="title">' . esc_html($item->title) . '</span>';
+        
+        if (!empty($item->url)) {
+            $output .= '</a>';
+        }
+        
         $output .= '<span class="arrow">';
         
         if ($has_children) {
@@ -34,9 +60,8 @@ class Navbar_Walker extends Walker_Nav_Menu {
     }
 
     public function end_el(&$output, $item, $depth = 0, $args = array()) {
-        if (!empty($args->walker->has_children)) {
+        if (!empty($item->classes) && in_array('menu-item-has-children', $item->classes)) {
             $output .= '</div>';
         }
     }
 }
-

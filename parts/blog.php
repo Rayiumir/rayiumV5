@@ -1,6 +1,6 @@
 <!-- Section Blog -->
 <section class="mt-5">
-    <h1 class="fs-2 font-bold mb-3">وبلاگ</h1>
+    <h1 class="fs-1 font-bold mb-3">وبلاگ</h1>
     <div class="row">
         <div class="col-md-8">
             <?php

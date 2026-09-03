@@ -17,7 +17,6 @@ class Navbar_Walker extends Walker_Nav_Menu {
         $output .= '<div class="menu-item">';
         $output .= '<div class="menu-header" onclick="toggleMenu(this)">';
         
-        // Create the link with the correct URL
         $attributes = '';
         if (!empty($item->attr_title)) {
             $attributes .= ' title="' . esc_attr($item->attr_title) . '"';
@@ -32,7 +31,6 @@ class Navbar_Walker extends Walker_Nav_Menu {
             $attributes .= ' href="' . esc_url($item->url) . '"';
         }
         
-        // Add the link with attributes
         if (!empty($item->url)) {
             $output .= '<a' . $attributes . ' class="menu-link">';
         }

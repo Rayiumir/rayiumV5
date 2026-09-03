@@ -56,6 +56,7 @@ function toggleMenu(header) {
     subMenu.classList.toggle('open');
 }
 
+
 jQuery(document).ready(function ($) {
     $('.copy-url-btn').on('click', function (e) {
         e.preventDefault();

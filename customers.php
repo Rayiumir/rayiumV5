@@ -6,7 +6,4 @@
             <?php echo get_template_part('parts/navbar'); ?>
              <main class="container mt-5">
                 <?php echo get_template_part('parts/pages/customers'); ?>
-             </main>
-        </div>
-    </div>
 <?php get_footer();?>

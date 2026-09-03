@@ -5,8 +5,5 @@
             <?php echo get_template_part('parts/navbar'); ?>
              <main class="container mt-5">
                 <?php echo get_template_part('parts/courses'); ?>
-                <?php echo get_template_part('parts/blog'); ?>
-             </main>
-        </div>
-    </div>
+                <?php echo get_template_part('parts/blog'); ?>       
 <?php get_footer();?>

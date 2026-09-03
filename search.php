@@ -6,7 +6,4 @@
              <main class="container mt-5">
                 <?php echo get_template_part('parts/courses'); ?>
                 <?php echo get_template_part('parts/pages/search'); ?>
-             </main>
-        </div>
-    </div>
 <?php get_footer();?>

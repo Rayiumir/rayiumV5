@@ -202,9 +202,43 @@ function disable_widgets_block_editor() {
 }
 add_action( 'after_setup_theme', 'disable_widgets_block_editor' );
 
+// Register Menus
 function register_my_menus() {
     register_nav_menus(array(
         'primary-menu' => 'موقعیت سایدبار',
     ));
 }
 add_action('init', 'register_my_menus');
+
+// Add Google Preferred Source Button
+function rayium_preferred_source_script() {
+    wp_enqueue_script(
+        'google-preferred-source',
+        'https://news.google.com/swg/js/v1/publisher.js',
+        array(),
+        null,
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'rayium_preferred_source_script');
+
+function rayium_preferred_source_shortcode() {
+    return '<div google-add-preferred-source-btn></div>';
+}
+add_shortcode('preferred_source', 'rayium_preferred_source_shortcode');
+
+function rayium_preferred_source_content($content) {
+    if (!is_singular(array('post', 'product'))) {
+        return $content;
+    }
+
+    if (!in_the_loop() || !is_main_query()) {
+        return $content;
+    }
+
+    $button = do_shortcode('[preferred_source]');
+
+    return $button . $content;
+}
+
+add_filter('the_content', 'rayium_preferred_source_content');

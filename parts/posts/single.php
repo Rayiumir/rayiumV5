@@ -166,6 +166,7 @@
             </section>
         </div>
         <aside class="col-md-4">
+            <?php if ( ot_get_option('c10') != "off" ) {  ?>
             <div class="card rounded-4 border-0 mb-3">
                 <div class="card-body">
                     <div class="text-center">
@@ -181,6 +182,7 @@
                     <?php the_author_meta('description'); ?>
                 </div>
             </div>
+            <?php } ?>
             <?php get_sidebar();?>
         </aside>
     </div>

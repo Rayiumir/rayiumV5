@@ -1,6 +1,6 @@
 <!-- Section Blog -->
 <section class="mt-5">
-    <h2 class="font-bold mb-3">اطلاعات نویسنده</h2>
+    <h3 class="font-bold mb-3">اطلاعات نویسنده</h3>
     <div class="row">
 
         <div class="col-md-8">
@@ -52,6 +52,7 @@
                     </div>
                 </div>
             </div>
+            <h3 class="font-bold mb-3">پست های منتشر شده توسط نویسنده</h3>
             <?php
                 if(have_posts()){
                     while(have_posts()){

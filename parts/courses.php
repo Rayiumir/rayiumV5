@@ -5,7 +5,7 @@
         مشاهده همه
     </a>
 </div>
-<h1 class="fs-2 font-bold mb-3">دوره آموزشی</h1>
+<h3 class="font-bold mb-3">دوره آموزشی</h3>
 <div class="row">
     <?php 
         $args=array(

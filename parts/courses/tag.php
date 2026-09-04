@@ -29,7 +29,7 @@
                 $student_count = rayium_get_student_count($post->ID);
         ?>
         <div class="col-md-3 mb-4">
-            <div class="card p-3 rounded-4 border-0">
+            <article class="card p-3 rounded-4 border-0">
                 <figure>
                     <?php if($percent) : ?>
                         <span class="badge text-white bg-danger bap fs-6 rounded-4 mb-3 position-absolute mt-2 me-2">
@@ -86,7 +86,7 @@
                     </ins>
                 </span>
                 <a href="<?php the_permalink() ?>" class="btn btn-primary rounded-5">مشاهده دوره</a>
-            </div>
+            </article>
         </div>
         <?php endwhile; wp_reset_query(); ?>
     </div>

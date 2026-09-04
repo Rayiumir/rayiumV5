@@ -1,7 +1,12 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading text-center mt-3">
         <figure class="imgLogo">
-            <img src="<?php echo RAYIUM_URI; ?>/img/Rayium_light.png" style="width: 200px; height: auto;" alt="" srcset="">
+            <?php 
+					$logo = ot_get_option('logoDark');
+					if(!empty($logo)) { 
+				?>
+				<img src="<?php echo $logo ?>" alt="<?php bloginfo( 'name' ) ?>" title="<?php bloginfo( 'name' ) ?>">
+				<?php } ?>
         </figure>
     </div>
     <div class="mt-3 p-3">

@@ -20,7 +20,7 @@
                                 'sizes' => '(max-width: 768px) 100vw, 50vw'
                             ]) 
                         ?>
-                        <h2 class="fs-3 font-bold mt-3 mb-3"><?php the_title();?></h2>
+                        <h2 class="font-bold mt-3 mb-3"><?php the_title();?></h2>
                         <p class="text-muted">
                             <?php echo get_the_excerpt(); ?>
                         </p>

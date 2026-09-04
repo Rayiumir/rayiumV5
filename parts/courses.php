@@ -64,7 +64,7 @@
                         </span>
                     <?php } ?>
 
-                    <h2 class="fs-3 mt-2 mb-3"><?php the_title(); ?></h2>
+                    <h2 class="fs-2 mt-2 mb-3"><?php the_title(); ?></h2>
 
                     <div class="row">
                         <div class="col font-bold">

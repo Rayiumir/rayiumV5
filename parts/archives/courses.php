@@ -21,7 +21,7 @@
                 $teacter = get_user_by( 'ID', $teacher_id );
                 $student_count = rayium_get_student_count($post->ID);
         ?>
-        <div class="col-md-3 mb-4">
+        <article class="col-md-3 mb-4">
             <div class="card p-3 rounded-4 border-0">
                 <figure>
                     <?php if($percent) : ?>
@@ -80,7 +80,7 @@
                 </span>
                 <a href="<?php the_permalink() ?>" class="btn btn-primary rounded-5">مشاهده دوره</a>
             </div>
-        </div>
+        </article>
         <?php endwhile; wp_reset_query(); ?>
     </div>
     <div class="mt-3">

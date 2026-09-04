@@ -23,7 +23,7 @@
                     <div class="duration">
                         <i class="fa-duotone fa-clock"></i> <?php echo estimate_study_duration();?>
                     </div>
-                    <h2 class="font-bold mt-5 mb-3"><?php the_title();?></h2>
+                    <h2 class="font-bold mt-3 mb-3"><?php the_title();?></h2>
                     
                     <?php the_content(); ?>
 
@@ -172,7 +172,11 @@
                         <figure class="avatar">
                             <?php echo get_avatar( get_the_author_meta('user_email'), '80', '' ); ?>
                         </figure>
-                        <h1 class="fs-2 font-bold mb-3"><?php the_author(); ?></h1>
+                        <?php 
+                            $url = get_author_posts_url(get_the_author_meta('ID'));
+                            $author = the_author();
+                            echo '<h1 class="fs-2 font-bold mb-3"><a href="'. $url . '">'. $author .'</a></h1>'; 
+                        ?>
                     </div>
                     <?php the_author_meta('description'); ?>
                 </div>

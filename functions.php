@@ -183,6 +183,7 @@ function contact_methods($profile_fields){
     $profile_fields['twitter'] = 'توئیتر';
     $profile_fields['telegram'] = 'تلگرام';
     $profile_fields['instagram'] = 'اینستاگرام';
+    $profile_fields['github'] = 'گیت هاب';
     return $profile_fields; 
 }
 add_filter('user_contactmethods','contact_methods');

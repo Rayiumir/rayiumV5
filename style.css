@@ -10,17 +10,19 @@ License: GNU General Public License v2 or later
 
 @font-face {
     font-family: Estedad;
-    src: url('../rayium/fonts/Estedad-Regular.woff2') format('woff2');
+    src: url('fonts/Estedad-Regular.woff2') format('woff2');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
-/* @font-face {
+@font-face {
     font-family: Estedad;
-    src: url('../rayium/fonts/Estedad-Bold.woff2') format('woff2');
+    src: url('fonts/Estedad-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
-} */
+}
 
 a{
     color: oklch(0% 0 0);
@@ -28,6 +30,9 @@ a{
 body {
     font-family: 'Estedad', sans-serif;
     background-color: #e8e8e8;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 #wrapper {

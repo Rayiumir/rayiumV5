@@ -2,6 +2,7 @@
 <section class="mt-5">
     <h1 class="fs-2 font-bold mb-3">وبلاگ</h1>
     <div class="row">
+        
         <div class="col-md-8">
             <article class="card rounded-3 mb-2">
                 <div class="card-body">
@@ -16,7 +17,14 @@
                             ]) 
                         ?>
                     </figure>
-                    <h2 class="fs-3 font-bold mt-3 mb-3"><?php the_title();?></h2>
+                    <div class="mt-2">
+                        <a href="https://www.google.com/preferences/source?q=rayium.ir" class="btn btn-light btn-sm rounded-5 float-left"><i class="fa-brands fa-google google-icon"></i> راییوم رو به منابع منتخبت در گوگل اضافه کن</a>
+                    </div>
+                    <div class="duration">
+                        <i class="fa-duotone fa-clock"></i> <?php echo estimate_study_duration();?>
+                    </div>
+                    <h2 class="font-bold mt-5 mb-3"><?php the_title();?></h2>
+                    
                     <?php the_content(); ?>
 
                     <div class="text-center mt-4 mb-4">
